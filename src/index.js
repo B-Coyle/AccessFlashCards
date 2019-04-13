@@ -1,8 +1,9 @@
-import './Styles/normalize.scss';
-import './Styles/index.scss';
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import './Styles/index.scss';
 import App from './App/App.js';
+import * as serviceWorker from './serviceWorker';
 
-ReactDom.render(<App />,
-document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
+
+serviceWorker.unregister();

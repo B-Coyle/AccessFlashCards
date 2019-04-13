@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import './Start.scss';
 
-
-export default class App extends Component {
-    constructor() {
-        super();
+export default class Start extends Component {
+    constructor(props) {
+        super(props);
         this.state = { 
         }
     }
-
-    render() {
+    render(props){
         return(
-            <section className='startScreen'>
-                
-            </section>
-        ) 
+            <div>
+                <button className="startBtn">Start Studying</button>
+            </div>
+        )
     }
+}
