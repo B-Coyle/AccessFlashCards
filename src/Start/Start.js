@@ -5,13 +5,24 @@ export default class Start extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+            selectedQuestion: []
         }
     }
-    render(props){
+
+
+    startGame = () => {
+      let randomQuestion = this.props.allQuestions.sort(() => .5 - Math.random()).pop();
+      this.setState = {
+        selectedQuestion: this.state.selectedQuestion.push(randomQuestion)
+      }
+      console.log(this.state.selectedQuestion)
+  }
+
+    render(){
         return(
-            <div>
-                <button className="startBtn">Start Studying</button>
-            </div>
+            <article>
+                <input type="button" className="startBtn" onClick={this.startGame} value="Start Studying" />
+            </article>
         )
     }
 }

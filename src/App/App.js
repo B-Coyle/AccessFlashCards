@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import './App.scss';
 import Dataset from '../Data/Dataset.js'
 import Card from '../Card/Card.js';
-import Button from '../Button/Button.js';
+// import Button from '../Button/Button.js';
 import Start from '../Start/Start.js';
-import Footer from '../Footer/Footer.js';
+// import Footer from '../Footer/Footer.js';
 
 
 export default class App extends Component {
@@ -16,30 +16,24 @@ export default class App extends Component {
     }
 
     render() {
-        let card= Dataset.accessibility.map(question => 
+        let card= Dataset.accessibility.forEach(question => {
             this.state.allQuestions.push(question)
-        )
-
+        })
 
         return(
             <section className='mainScreen'>
                 <header className='header'>
                     <h1 className="appTitle">Aria Garden</h1>
                 </header>
-                <article className="startContainer">
-                <Start />>
-                </article>
-                <article className='cardContainer'>
-                    <Card 
+                <Start 
                     allQuestions = {this.state.allQuestions}
-                    />
-                </article>
-                <article className="buttonContainer">                    
-                    <Button />
-                </article>
-                <article className="footerContainer">
-                    <Footer />
-                </article>
+                />
+                <Card 
+                allQuestions = {this.state.allQuestions}
+                />
+                    {card}
+                    {/* <Button />
+                    <Footer /> */}
             </section>
         ) 
     }
