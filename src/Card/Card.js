@@ -8,29 +8,38 @@ export default class Card extends Component {
         this.state = {
             practice: [],
             goodToGo: [],
-            isFlipped: false
+            isFlipped: false,
+            answered: false
         }
     }
 
     updateGoodList = () => {
-        console.log('Test random question in good', this.props.randomQuestion[0]);
-        this.state.goodToGo.push(this.props.randomQuestion[0])
-        console.log('Test after push good', this.state.goodToGo)
+        this.state.goodToGo.push(this.props.randomQuestion)
+        this.setState({
+            answered: true
+        })
 
     }
 
     updatePracticeList = () => {
-        console.log('Test random question in practice', this.props.randomQuestion[0]);
-        this.state.practice.push(this.props.randomQuestion[0])
-        console.log('Test after push practice', this.state.practice)
+        this.state.practice.push(this.props.randomQuestion)
+        this.setState ({
+            answered: true
+        })
     }
 
 
     flipCard = () => {
-        console.log('Hi')
         this.setState({
-          isFlipped: true
+          isFlipped: true,
+          answered: true
         })
+    }
+
+    displayNextCard= () => {
+        console.log('Test click for next card')
+        if (this.state.answered === true) {
+        }
     }
 
 
@@ -71,6 +80,7 @@ render () {
             </article>
         </section>
     )
+   
 
      }
  }
