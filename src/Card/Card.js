@@ -7,12 +7,18 @@ export default class Card extends Component {
         super(props);
     }
 
-render (props) {
+render () {
+    console.log('Test card randomQuestion',this.props.randomQuestion)
     return (
-    <section className="quizCard">
-        <h3 className="category"><span className="categorySpan">Category: </span>{this.props.allQuestions.category}</h3>
-        <h3 className="questionLabel"><span className="questionSpan">Question: </span>{ this.props.allQuestions.question}</h3>
-    </section>
+        <section>
+            <header className='header'>
+                <h1 className="appTitle">Aria Garden</h1>
+            </header>
+            <article className="quizCard">
+                <h3 className="category"><span className="categorySpan">Category: </span>{this.props.randomQuestion[0].category}</h3>
+                <h3 className="questionLabel"><span className="questionSpan">Question: </span>{ this.props.randomQuestion[0].question}</h3>
+            </article>
+        </section>
     )
 
      }

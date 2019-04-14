@@ -1,0 +1,26 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "reset title shuffle";
+}
+
+.appTitle{
+    grid-area: title;
+    font-size: 90px;
+    text-align: center;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.resetContainer{
+    grid-area: reset;
+    display: inline;
+    text-align:center
+}
+
+.shuffleContainer{
+    grid-area: shuffle;
+    display: inline;
+    text-align:center
+}
