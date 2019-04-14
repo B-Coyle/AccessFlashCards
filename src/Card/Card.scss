@@ -1,6 +1,13 @@
 .quizCard{
-    border: solid pink 5px;
+    border: 5px green solid;
     width: 50%;
     color: #fff;
+    background: hsla(137, 100%, 81%, .6)
 }
 
+.localStgContainer {
+    margin: 20px 0;
+    text-decoration: underline;
+    border-top: 5px green solid;
+    border-bottom: 5px green solid;
+}
