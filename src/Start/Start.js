@@ -5,18 +5,22 @@ export default class Start extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            selectedQuestion: []
+            selectedQuestion: [],
         }
     }
 
 
-    startGame = () => {
+
+    startGame = (props) => {
       let randomQuestion = this.props.allQuestions.sort(() => .5 - Math.random()).pop();
       this.setState = {
         selectedQuestion: this.state.selectedQuestion.push(randomQuestion)
       }
-      console.log(this.state.selectedQuestion)
+      this.props.randomQuestion(this.state.selectedQuestion)
+      console.log(this.state.selectedQuestion);
   }
+
+
 
     render(){
         return(

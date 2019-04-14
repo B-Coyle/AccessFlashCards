@@ -9,8 +9,8 @@ export default class Button extends Component {
     render(){
         return(
             <section className="buttons">
-                <button className="prevBtn">Previous</button>
-                <button className="nextBtn">Next</button> 
+                <input type='button' className="prevBtn" value='Previous Card' />
+                <input type='button' className="nextBtn" value='Next Card' />
             </section>
         )
     }
