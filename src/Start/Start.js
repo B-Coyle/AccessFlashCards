@@ -8,8 +8,9 @@ export default class Start extends Component {
             selectedQuestion: [],
         }
     }
+
     startGame = () => {
-      let randomQuestion = this.props.allQuestions.sort(() => .5 - Math.random()).pop();
+      let randomQuestion = this.props.allQuestions.sort(() => .5 - Math.random());
       this.setState = {
         selectedQuestion: this.state.selectedQuestion.push(randomQuestion)
       }

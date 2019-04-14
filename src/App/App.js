@@ -13,6 +13,9 @@ export default class App extends Component {
             allQuestions: [],
             randomQuestion: [],
             checked: false,
+            practice: [],
+            goodToGo: [],
+
         }
     }
 
@@ -29,9 +32,10 @@ export default class App extends Component {
         .catch(error => console.log('Card not uploading', error))
     }
 
-    assignRandomQuestion= (selectedQuestion) => {
+    assignRandomQuestion= () => {
+        let randomQuestion = this.state.allQuestions.sort(() => .5 - Math.random()).pop();
         this.setState ({
-        randomQuestion: selectedQuestion,
+        randomQuestion: randomQuestion,
         checked: true
         })
     }
@@ -44,6 +48,12 @@ export default class App extends Component {
     //     })
     // }
 
+        // componentDidMount = () => {
+    //     this.setState({
+    //     practice: JSON.parse(localStorage.getItem(this.state.randomQuestion)) || false,
+    //     goodToGo: JSON.parse(localStorage.getItem(this.state.randomQuestion)) || false,
+    //     })
+    // }
 
 
     render() {
@@ -57,6 +67,7 @@ export default class App extends Component {
                 <Card 
                 randomQuestion = {this.state.randomQuestion}
                 allQuestions = {this.state.allQuestions}
+                nextCard = {this.assignRandomQuestion}
                 />
                 <Footer />
                 </main>

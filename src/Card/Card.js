@@ -6,8 +6,6 @@ export default class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            practice: [],
-            goodToGo: [],
             isFlipped: false,
             answered: false
         }
@@ -15,6 +13,7 @@ export default class Card extends Component {
 
     updateGoodList = () => {
         this.state.goodToGo.push(this.props.randomQuestion)
+        //need to change this since I states it to app
         this.setState({
             answered: true
         })
@@ -23,6 +22,7 @@ export default class Card extends Component {
 
     updatePracticeList = () => {
         this.state.practice.push(this.props.randomQuestion)
+        //need to change this since I moved states to app
         this.setState ({
             answered: true
         })
@@ -36,11 +36,9 @@ export default class Card extends Component {
         })
     }
 
-    displayNextCard= () => {
-        console.log('Test click for next card')
-        if (this.state.answered === true) {
-        }
-    }
+    displayNextCard = () => {
+        this.props.nextCard()
+      }
 
 
 
@@ -50,9 +48,9 @@ render () {
                 <section className="quizCard">
                 <article className="answerCard">
                     <h3 className="category">Category: </h3>
-                    <h4>{this.props.randomQuestion[0].category}</h4>
+                    <h4>{this.props.randomQuestion.category}</h4>
                     <h3 className="answerLabel">Answer:</h3>
-                    <h4>{ this.props.randomQuestion[0].answer}</h4>
+                    <h4>{ this.props.randomQuestion.answer}</h4>
                 <article className="localStgContainer">
                     <h3>Be honest: How did you do?</h3>
                     <input className="greatBtn" type="button" value="Great!" onClick={this.updateGoodList}/>
@@ -60,7 +58,6 @@ render () {
                 </article>
                 </article>
                 <article className="cardBtnContainer">
-                    <input type='button' className="prevBtn" value='Previous Card' onClick={this.displayPreviousCard}/>
                     <input type='button' className="nextBtn" value='Next Card'  onClick={this.displayNextCard}/>
                 </article> 
                 </section>
@@ -69,12 +66,11 @@ render () {
         <section className="quizCard">
             <article className="questionCard" >
                 <h3 className="category"><span className="categorySpan">Category: </span></h3>
-                    <h4>{this.props.randomQuestion[0].category}</h4>
+                    <h4>{this.props.randomQuestion.category}</h4>
                 <h3 className="questionLabel"><span className="questionSpan">Question: </span></h3>
-                    <h4>{ this.props.randomQuestion[0].question}</h4>
+                    <h4>{ this.props.randomQuestion.question}</h4>
             </article>
             <article className="buttonContainer">
-                <input type='button' className="prevBtn" value='Previous Card' onClick={this.displayPreviousCard}/>
                 <input type='button' className="flipBtn" value="Flip Card" onClick={this.flipCard}/>
                 <input type='button' className="nextBtn" value='Next Card'  onClick={this.displayNextCard}/>
             </article>
