@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.scss';
 import Dataset from '../Data/Dataset.js'
 import Card from '../Card/Card.js';
-import Button from '../Button/Button.js';
 import Start from '../Start/Start.js';
 import Footer from '../Footer/Footer.js';
 import Header from '../Header/Header.js';
@@ -14,7 +13,7 @@ export default class App extends Component {
         this.state = { 
             allQuestions: [],
             randomQuestion: [],
-            checked: false
+            checked: false,
         }
     }
 
@@ -36,7 +35,6 @@ assignRandomQuestion= (selectedQuestion) => {
       randomQuestion: selectedQuestion,
       checked: true
     })
-    console.log('App Random Question', this.state.randomQuestion)
   }
 
     render() {
@@ -45,12 +43,15 @@ assignRandomQuestion= (selectedQuestion) => {
         })
 
         if (this.state.checked === true) {
-            return (<Card 
+            return (
+                <main>
+                 <Header />
+                <Card 
                 randomQuestion = {this.state.randomQuestion}
                 allQuestions = {this.state.allQuestions}
                 />
+                </main>
                 )
-                (<Button />)
 
         }
 

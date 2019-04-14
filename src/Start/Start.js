@@ -17,7 +17,6 @@ export default class Start extends Component {
         selectedQuestion: this.state.selectedQuestion.push(randomQuestion)
       }
       this.props.randomQuestion(this.state.selectedQuestion)
-      console.log(this.state.selectedQuestion);
   }
 
 
