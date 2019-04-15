@@ -22,12 +22,33 @@ export default class Card extends Component {
 
 
 
-    updateStudyList = () => {
-        let practice = JSON.parse(localStorage.getItem('needPractice')) || []
-        practice = Object.keys(practice).concat(this.props.randomQuestion)
-          let storage = {practice: practice}
-          localStorage.setItem('needPractice', JSON.stringify(storage))
-      }
+    updateStudyList = (e) => {
+        let obj;
+        if (JSON.parse(localStorage.getItem('needPractice'))) {
+            if(e.target.value === 'Great!') {
+                obj = JSON.parse(localStorage.getItem('needPractice'))
+                obj.goodToGo.push(this.props.randomQuestion)
+            } else {
+                obj = JSON.parse(localStorage.getItem('needPractice'))
+                obj.practice.push(this.props.randomQuestion)
+            }
+        } else {
+            if (e.target.value === 'Great!') {
+                obj = { practice: [],
+                    goodToGo: [this.props.randomQuestion] }
+            } else {
+                obj = { practice: [this.props.randomQuestion],
+                    goodToGo: []
+            }
+            }
+        }
+        localStorage.setItem('needPractice', JSON.stringify(obj))
+        }
+        
+        // let practice = JSON.parse(localStorage.getItem('needPractice')) || []
+        //   let storage = {practice: 
+        //     practice.concat(this.props.randomQuestion)}
+        //   localStorage.setItem('needPractice', JSON.stringify(storage))
 
 
     flipCard = () => {
@@ -54,7 +75,7 @@ render () {
                     <h4>{ this.props.randomQuestion.answer}</h4>
                 <article className="localStgContainer">
                     <h3>Be honest: How did you do?</h3>
-                    <input className="greatBtn" type="button" value="Great!" onClick={this.updateGoodList}/>
+                    <input className="greatBtn" type="button" value="Great!" onClick={this.updateStudyList}/>
                     <input className="notGreatBtn" type="button" value="Not so great..." onClick={this.updateStudyList}/>
                 </article>
                 </article>

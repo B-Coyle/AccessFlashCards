@@ -13,19 +13,18 @@ export default class App extends Component {
             allQuestions: [],
             randomQuestion: [],
             checked: false,
-            practice: [],
-            goodToGo: [],
-
         }
     }
 
+
+
     componentDidMount() {
         this.setState({isLoading: true});
-        fetch('https://gist.githubusercontent.com/B-Coyle/4c90f3d68b8d8de31e91540a2415e5f9/raw/9b514801f8f4db9fab49b3c9eba74572eed345b7/fetchexample')
+        fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/b-coyle-dataset/accessibility')
         .then(response => response.json())
         .then(json => {
             this.setState({
-                allQuestions: json,
+                allQuestions: json.accessibility,
                 isLoading: false
             });
         })
