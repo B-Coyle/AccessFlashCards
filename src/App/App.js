@@ -48,14 +48,6 @@ export default class App extends Component {
     //     })
     // }
 
-        // componentDidMount = () => {
-    //     this.setState({
-    //     practice: JSON.parse(localStorage.getItem(this.state.randomQuestion)) || false,
-    //     goodToGo: JSON.parse(localStorage.getItem(this.state.randomQuestion)) || false,
-    //     })
-    // }
-
-
     render() {
        
         if (this.state.checked === true) {
@@ -68,6 +60,8 @@ export default class App extends Component {
                 randomQuestion = {this.state.randomQuestion}
                 allQuestions = {this.state.allQuestions}
                 nextCard = {this.assignRandomQuestion}
+                practice = {this.state.practice}
+                goodToGo = {this.state.goodToGo}
                 />
                 <Footer />
                 </main>
