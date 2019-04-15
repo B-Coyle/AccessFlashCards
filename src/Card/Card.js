@@ -7,26 +7,27 @@ export default class Card extends Component {
         super(props);
         this.state = {
             isFlipped: false,
-            answered: false
+            answered: false,
         }
     }
 
-    updateGoodList = () => {
-        this.state.goodToGo.push(this.props.randomQuestion)
-        //need to change this since I states it to app
-        this.setState({
-            answered: true
-        })
+    // updateGoodList = () => {
+    //     console.log('Test good list', this.props.goodToGo)
+    //     this.props.goodToGo.push(this.props.randomQuestion)
+    //     this.setState({
+    //         answered: true
+    //     })
 
-    }
+    // }
 
-    updatePracticeList = () => {
-        this.state.practice.push(this.props.randomQuestion)
-        //need to change this since I moved states to app
-        this.setState ({
-            answered: true
-        })
-    }
+
+
+    updateStudyList = () => {
+        let practice = JSON.parse(localStorage.getItem('needPractice')) || []
+        practice = Object.keys(practice).concat(this.props.randomQuestion)
+          let storage = {practice: practice}
+          localStorage.setItem('needPractice', JSON.stringify(storage))
+      }
 
 
     flipCard = () => {
@@ -54,7 +55,7 @@ render () {
                 <article className="localStgContainer">
                     <h3>Be honest: How did you do?</h3>
                     <input className="greatBtn" type="button" value="Great!" onClick={this.updateGoodList}/>
-                    <input className="notGreatBtn" type="button" value="Not so great..." onClick={this.updatePracticeList}/>
+                    <input className="notGreatBtn" type="button" value="Not so great..." onClick={this.updateStudyList}/>
                 </article>
                 </article>
                 <article className="cardBtnContainer">
