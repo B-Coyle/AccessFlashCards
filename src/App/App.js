@@ -57,6 +57,7 @@ export default class App extends Component {
                 nextCard = {this.assignRandomQuestion}
                 practice = {this.state.practice}
                 goodToGo = {this.state.goodToGo}
+                resetGame= {this.resetGame}
                 />
                 <Footer />
                 </main>
