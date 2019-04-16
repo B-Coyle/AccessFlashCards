@@ -16,7 +16,9 @@ export default class App extends Component {
         }
     }
 
-
+    resetGame() {
+        window.location.reload();
+    }
 
     componentDidMount() {
         this.setState({isLoading: true});
@@ -39,21 +41,15 @@ export default class App extends Component {
         })
     }
 
-    // resetGame() {
-    //     this.setState({
-    //         allQuestions: [],
-    //         randomQuestion: [],
-    //         checked: false
-    //     })
-    // }
+   
 
     render() {
-       
         if (this.state.checked === true) {
             return (
                 <main>
                  <Header 
                      allQuestions = {this.state.allQuestions}
+                     resetGame = {this.resetGame}
                  />
                 <Card 
                 randomQuestion = {this.state.randomQuestion}
@@ -73,7 +69,7 @@ export default class App extends Component {
                 />
                 <Start 
                     randomQuestion = {this.assignRandomQuestion}
-                    allQuestions = {this.state.allQuestions}
+                    allQuestions = {this.state.allQuestions}     
                 />
                     <Footer />
             </section>
