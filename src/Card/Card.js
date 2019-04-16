@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Card.scss';
+import MarkedPractice from '../MarkedPractice/MarkedPractice.js'
 
 
 export default class Card extends Component {
@@ -11,26 +12,19 @@ export default class Card extends Component {
         }
     }
 
-    // updateGoodList = () => {
-    //     console.log('Test good list', this.props.goodToGo)
-    //     this.props.goodToGo.push(this.props.randomQuestion)
-    //     this.setState({
-    //         answered: true
-    //     })
-
-    // }
-
-
-
     updateStudyList = (e) => {
         let obj;
         if (JSON.parse(localStorage.getItem('needPractice'))) {
             if(e.target.value === 'Great!') {
                 obj = JSON.parse(localStorage.getItem('needPractice'))
                 obj.goodToGo.push(this.props.randomQuestion)
+                this.props.allQuestions.splice()
+                console.log('goodToGo', this.props.allQuestions)
             } else {
                 obj = JSON.parse(localStorage.getItem('needPractice'))
                 obj.practice.push(this.props.randomQuestion)
+                console.log('practice', this.props.allQuestions)
+                this.props.allQuestions.splice()
             }
         } else {
             if (e.target.value === 'Great!') {
@@ -44,12 +38,6 @@ export default class Card extends Component {
         }
         localStorage.setItem('needPractice', JSON.stringify(obj))
         }
-        
-        // let practice = JSON.parse(localStorage.getItem('needPractice')) || []
-        //   let storage = {practice: 
-        //     practice.concat(this.props.randomQuestion)}
-        //   localStorage.setItem('needPractice', JSON.stringify(storage))
-
 
     flipCard = () => {
         this.setState({
@@ -60,14 +48,19 @@ export default class Card extends Component {
 
     displayNextCard = () => {
         this.props.nextCard()
+        this.setState({
+            // isFlipped: false
+        })
       }
 
 
 
 render () {
+    if(this.props.allQuestions.length){
         if(this.state.isFlipped === true) {
             return (
                 <section className="quizCard">
+                <h2>Need Practice</h2>
                 <article className="answerCard">
                     <h3 className="category">Category: </h3>
                     <h4>{this.props.randomQuestion.category}</h4>
@@ -85,7 +78,7 @@ render () {
                 </section>
             )
         } else return (
-        <section className="quizCard">
+        <section className="quizCard" >
             <article className="questionCard" >
                 <h3 className="category"><span className="categorySpan">Category: </span></h3>
                     <h4>{this.props.randomQuestion.category}</h4>
@@ -98,7 +91,13 @@ render () {
             </article>
         </section>
     )
-   
-
+        } else {
+        return (
+        
+        <MarkedPractice 
+            isFlipped = {this.state.isFlipped}
+        />
+        )
+         }
      }
- }
+}
