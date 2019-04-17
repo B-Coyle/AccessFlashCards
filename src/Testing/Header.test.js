@@ -7,7 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 const mockResetGame =  jest.fn()
-window.addEventListener = jest.fn()
 
 describe('Header', () => {
 let wrapper;
@@ -24,7 +23,7 @@ it('should match the snapshot with all data passed in', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
-it('should have an event listener on the click start button', () => {
+it('should have an event listener on the click reset game button', () => {
     wrapper.find('input').simulate('click')
     expect(mockResetGame).toHaveBeenCalled();
 

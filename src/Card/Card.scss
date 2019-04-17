@@ -1,13 +1,16 @@
+@import '../Styles/variables.scss';
+
+
 .quizCard{
-    border: 5px green solid;
+    border: $textBorder;
     width: 50%;
-    color: #fff;
+    color: $fontColor;
     background: hsla(137, 100%, 81%, .6)
 }
 
 .localStgContainer {
     margin: 20px 0;
     text-decoration: underline;
-    border-top: 5px green solid;
-    border-bottom: 5px green solid;
+    border-top: $textBorder;
+    border-bottom: $textBorder;
 }

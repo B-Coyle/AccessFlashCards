@@ -6,17 +6,10 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
+const mockStartGame =  jest.fn()
 
 describe('Start', () => {
 let wrapper;
-let mockStart = jest.fn();
-let mockQuestion = {
-    "question": "What is accessibility?",
-    "answer": "Is the design and creation of websites that can be used by everyone.",
-    "id": 1,
-    "category": "Definition"
-  }
-
 
 beforeEach(() => {
     wrapper = shallow(
@@ -27,5 +20,10 @@ beforeEach(() => {
   it('Should match rendered snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should have an event listener on the click start button', () => {
+    wrapper.find('input').simulate('click')
+    expect(mockStartGame).toHaveBeenCalled();
+});
 
 })
