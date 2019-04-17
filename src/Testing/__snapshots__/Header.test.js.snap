@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match the snapshot with all data passed in 1`] = `
+<header
+  className="header"
+>
+  <h1
+    className="appTitle"
+  >
+    Aria Garden
+  </h1>
+  <div
+    className="resetContainer"
+  >
+    <input
+      onClick={[MockFunction]}
+      type="button"
+      value="Reset Game from Start"
+    />
+  </div>
+</header>
+`;
