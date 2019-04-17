@@ -1,3 +1,5 @@
+@import '../Styles/variables.scss';
+
 .mainScreen {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -6,13 +8,13 @@
     "header header header"
     "prevBtn card nextBtn"
     "footer footer footer";
-    margin: 0;
+    margin: $defaultMargin;
     padding: 0;
     width: 100%;
     height: 100vh;
 }
 
-.cardContainer{
+.quizCard{
     grid-area: card;
 }
 

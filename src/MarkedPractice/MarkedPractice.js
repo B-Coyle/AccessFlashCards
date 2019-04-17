@@ -36,14 +36,14 @@ export default class MarkedPractice extends Component {
     }
 
 render() {
-console.log('test', this.state.newQuestion)
+    console.log(this.props.isFlipped)
     if(this.state.practice === false && this.state.good === false) {
         return (
         <article className="endSelectBtn">
         <h2>What would you like to review?</h2>
-        <input type="button" value="Need more practice" onClick={this.displayNextPractice} />
-        <input type="button" value="Good to Go" onClick={this.displayGood}/>
-        <input type="button" value="Take me to the Start page" onClick={this.restartPracticeGame}/>
+        <input type="button" className="practiceBtn" value="Need more practice" onClick={this.displayNextPractice} />
+        <input type="button" className="goodBtn" value="Good to Go" onClick={this.displayGood}/>
+        <input type="button" className="resetPracticeBtn" value="Take me to the Start page" onClick={this.restartPracticeGame}/>
         </article>
     )
     } else {

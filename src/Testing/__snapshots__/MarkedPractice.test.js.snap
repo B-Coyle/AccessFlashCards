@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarkedPractice should match rendered snapshot 1`] = `
+<article
+  className="endSelectBtn"
+>
+  <h2>
+    What would you like to review?
+  </h2>
+  <input
+    className="practiceBtn"
+    onClick={[Function]}
+    type="button"
+    value="Need more practice"
+  />
+  <input
+    className="goodBtn"
+    onClick={[Function]}
+    type="button"
+    value="Good to Go"
+  />
+  <input
+    className="resetPracticeBtn"
+    onClick={[Function]}
+    type="button"
+    value="Take me to the Start page"
+  />
+</article>
+`;
