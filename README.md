@@ -8,10 +8,12 @@ For this project, I wanted to create an application that solves a common problem
 Installation
 In order to install and run this app on your local machine type the following in your terminal:
 
-git clone https://github.com/B-Coyle/AccessFlashCards.git
-cd AccessFlashCards
-npm install
-npm start
+<ul>
+  <li>git clone https://github.com/B-Coyle/AccessFlashCards.git</li>
+  <li>cd AccessFlashCards</li>
+  <li>npm install</li>
+  <li>npm start</li>
+  </ul>
 
 ## Screenshots
 
