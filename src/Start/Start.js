@@ -15,7 +15,7 @@ export default class Start extends Component {
 
     render(){
         return(
-            <article>
+            <article className="startContainer">
                 <input type="button" className="startBtn" onClick={this.startGame} value="Start Studying" />
             </article>
         )

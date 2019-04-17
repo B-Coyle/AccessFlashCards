@@ -2,9 +2,17 @@
 
 
 .footerContainer{
-    color: black;
+    color: $fontColor;
     border: $textBorder;
     background-color: rgba(240, 255, 173, .5);
     width: 55%;
     height: 250px;
+    text-align: center;
+    margin: 30px 200px;
+    font-size: 12pt;
+}  
+.knowMoreLabel,
+.resourcesLabel{
+    text-decoration: $defaultTextDecoration;
+    font-size: 14pt;
 }
