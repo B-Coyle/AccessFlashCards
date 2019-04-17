@@ -6,7 +6,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     "header header header"
-    "prevBtn card nextBtn"
+    "card card card"
     "footer footer footer";
     margin: $defaultMargin;
     padding: 0;
@@ -16,10 +16,7 @@
 
 .quizCard{
     grid-area: card;
-}
-
-.buttonContainer{
-    grid-area: prevBtn nextBtn;
+    
 }
 
 .header{
@@ -28,4 +25,11 @@
 
 .footerContainer{
     grid-area: footer;
+    
+}
+
+.startContainer{
+    grid-area: card;
+    display: flex;
+    justify-content: center
 }

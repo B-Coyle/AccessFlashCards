@@ -3,9 +3,12 @@
 
 .quizCard{
     border: $textBorder;
-    width: 50%;
+    width: 55%;
     color: $fontColor;
-    background: hsla(137, 100%, 81%, .6)
+    background: hsla(137, 100%, 81%, .6);
+    margin: 0 200px;
+    text-align: center;
+    font-size: 15pt;
 }
 
 .localStgContainer {
@@ -13,4 +16,28 @@
     text-decoration: underline;
     border-top: $textBorder;
     border-bottom: $textBorder;
+}
+
+.flipBtn,
+.nextBtn,
+.greatBtn,
+.notGreatBtn{
+    border-radius: 5px;
+    color: $fontColor;
+    background-color: green;
+    width: 150px;
+    justify-content: center;
+    height: 50px;
+    margin: 10px;
+    font-size: 13pt;
+}
+
+.category,
+.answerLabel,
+.questionLabel{
+    text-decoration: $defaultTextDecoration
+}
+
+.honestyLabel{
+    text-decoration: $defaultTextDecoration
 }

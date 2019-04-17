@@ -1,5 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##  Project Description
+For this project, I wanted to create an application that solves a common problem that most students face when reviewing course material/concepts - finding effective study techniques to optimize learning retention and recall. I decided to focus my attention on the subject of Accessibility and ARIA - which can sometimes get neglected in the grand scheme of things. I wanted to raise awareness of ARIA/Accessibility because everyone deserves to view applications and use programs no matter what. 
+
+
+## Installation instructions
+Installation
+In order to install and run this app on your local machine type the following in your terminal:
+
+git clone https://github.com/B-Coyle/AccessFlashCards.git
+cd AccessFlashCards
+npm install
+npm start
+
+## Screenshots
+
+Start Screen
+[![localhost-3000-3.png](https://i.postimg.cc/CL8tm2Pq/localhost-3000-3.png)](https://postimg.cc/gnYN0gPz)
+
+Main Screen
+[![localhost-3000-2.png](https://i.postimg.cc/hvf0NFPq/localhost-3000-2.png)](https://postimg.cc/GTnYs5yM)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -31,38 +53,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

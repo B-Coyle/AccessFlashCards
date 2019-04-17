@@ -13,7 +13,7 @@ export default class Header extends Component {
             <header className='header'>
                 <h1 className="appTitle">Aria Garden</h1>
                 <div className='resetContainer'>
-                    <input type='button' value='Reset Game from Start' onClick={this.props.resetGame}/>
+                    <input type='button' value='Reset Game from Start' className="resetBtn" onClick={this.props.resetGame}/>
                 </div>
             </header>
         )

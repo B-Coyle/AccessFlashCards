@@ -59,14 +59,15 @@ render () {
     if(this.props.allQuestions.length){
         if(this.state.isFlipped === true) {
             return (
-                <section className="quizCard">
+            <section className="quizCard">
                 <article className="answerCard">
                     <h3 className="category">Category: </h3>
                     <h4>{this.props.randomQuestion.category}</h4>
                     <h3 className="answerLabel">Answer:</h3>
                     <h4>{ this.props.randomQuestion.answer}</h4>
                 <article className="localStgContainer">
-                    <h3>Be honest: How did you do?</h3>
+                    <h3 className="honestyLabel">Be honest: How did you do?</h3>
+                    <h6>(After selecting - hit the "Next Card" button)</h6>
                     <input className="greatBtn" type="button" value="Great!" onClick={this.updateStudyList}/>
                     <input className="notGreatBtn" type="button" value="Not so great..." onClick={this.updateStudyList}/>
                 </article>
@@ -74,7 +75,7 @@ render () {
                 <article className="cardBtnContainer">
                     <input type='button' className="nextBtn" value='Next Card'  onClick={this.displayNextCard}/>
                 </article> 
-                </section>
+            </section>
             )
         } else return (
         <section className="quizCard" >
