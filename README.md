@@ -27,6 +27,12 @@ Main Screen
 
 [![localhost-3000-2.png](https://i.postimg.cc/hvf0NFPq/localhost-3000-2.png)](https://postimg.cc/GTnYs5yM)
 
+## Wireframes
+[![20190417-081142.jpg](https://i.postimg.cc/769YQ8fS/20190417-081142.jpg)](https://postimg.cc/wytp7r5B)
+[![20190417-081134.jpg](https://i.postimg.cc/NMmPgB1r/20190417-081134.jpg)](https://postimg.cc/34rZ1MfK)
+[![20190417-081120.jpg](https://i.postimg.cc/jd42DfsM/20190417-081120.jpg)](https://postimg.cc/56jbG6Qz)
+[![20190417-081128.jpg](https://i.postimg.cc/G2gJwffs/20190417-081128.jpg)](https://postimg.cc/xJHbL6n0)
+
 
 ## Learning Goals
 The major goal of this project was to practice using fecth API, ReactJS, JSX, and SCSS technologies to make an interactive app.
