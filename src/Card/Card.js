@@ -49,7 +49,7 @@ export default class Card extends Component {
     displayNextCard = () => {
         this.props.nextCard()
         this.setState({
-            // isFlipped: false
+            isFlipped: false
         })
       }
 
@@ -60,7 +60,6 @@ render () {
         if(this.state.isFlipped === true) {
             return (
                 <section className="quizCard">
-                <h2>Need Practice</h2>
                 <article className="answerCard">
                     <h3 className="category">Category: </h3>
                     <h4>{this.props.randomQuestion.category}</h4>
@@ -96,6 +95,8 @@ render () {
         
         <MarkedPractice 
             isFlipped = {this.state.isFlipped}
+            displayNextCard = {this.props.displayNextCard}
+            flipCard= {this.flipCard}
         />
         )
          }

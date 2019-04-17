@@ -5,7 +5,7 @@ export default class Start extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            selectedQuestion: [],
+            // selectedQuestion: [],
         }
     }
 
