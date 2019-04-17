@@ -28,6 +28,15 @@ Main Screen
 [![localhost-3000-2.png](https://i.postimg.cc/hvf0NFPq/localhost-3000-2.png)](https://postimg.cc/GTnYs5yM)
 
 
+## Learning Goals
+The major goal of this project was to practice using fecth API, ReactJS, JSX, and SCSS technologies to make an interactive app.
+
+Other goals included: saving cards to local storage, using scss styling, writing DRY code, and practicing testing.
+
+There were many struggles and successes with this project and I have a laundry list of extensions I want to add to this project (which will be updated as issues by 4/19/2017). I look forward to coming back to this project and refactoring and adding in additional tests to improve the functionality for all users. 
+
+
+## Additional information
 ## Available Scripts
 
 In the project directory, you can run:
