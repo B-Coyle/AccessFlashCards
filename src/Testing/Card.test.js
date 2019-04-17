@@ -14,14 +14,28 @@ const defaultState = {
 const mockUpdateStudyList = jest.fn()
 const mockFlip = jest.fn()
 const mockDisplayNextCard = jest.fn()
-
+const resetGameMock = jest.fn()
+const randomQuestion = mockQuestions[0]
+const mockQuestions ={
+        question: "What is accessibility?",
+        answer: "Is the design and creation of websites that can be used by everyone.",
+        id: 1,
+        category: "Definition"
+        }
 
   describe('Card', () => {
       let wrapper;
 
       beforeEach(()=> {
           wrapper = shallow(
-              <Card />
+              <Card 
+                randomQuestion = {randomQuestion}
+                allQuestions = {mockQuestions}
+                nextCard = {mockDisplayNextCard}
+                practice = {[]}
+                goodToGo = {[]}
+                resetGame= {resetGameMock}
+              />
           );
       });
 
@@ -33,9 +47,18 @@ const mockDisplayNextCard = jest.fn()
         expect(wrapper.state()).toEqual(defaultState);
       });
 
-    it('should have an event listener to update localStorage choices', () => {
-        wrapper.find('.greatBtn').simulate('click')
+    it.only('should have an event listener to update localStorage choices', () => {
+        wrapper.instance().updateStudyList = mockUpdateStudyList
+        
+        wrapper.setState({ isFlipped: true })
+        expect(wrapper.state('isFlipped')).toEqual(true)
+
+        const greatBtn = wrapper.find('.greatBtn')
+
+        greatBtn.simulate('click')
+
         expect(mockUpdateStudyList).toHaveBeenCalled();
+        expect(mockUpdateStudyList).toHaveBeenCalledTimes(1);
     });
 
     it('should have an event listener on the next button to display the next card', () => {
