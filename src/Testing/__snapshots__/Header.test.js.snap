@@ -13,6 +13,7 @@ exports[`Header should match the snapshot with all data passed in 1`] = `
     className="resetContainer"
   >
     <input
+      className="resetBtn"
       onClick={[MockFunction]}
       type="button"
       value="Reset Game from Start"

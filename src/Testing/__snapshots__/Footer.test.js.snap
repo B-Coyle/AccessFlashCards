@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer should match the snapshot with all data passed in 1`] = `
-<article
+<footer
   className="footerContainer"
 >
-  <h3>
+  <h3
+    className="knowMoreLabel"
+  >
     Want to know more?
   </h3>
-  <h4>
+  <h4
+    className="resourcesLabel"
+  >
     Resources on Web Accessibility and ARIA
   </h4>
   <ul>
@@ -40,5 +44,5 @@ exports[`Footer should match the snapshot with all data passed in 1`] = `
       </a>
     </li>
   </ul>
-</article>
+</footer>
 `;

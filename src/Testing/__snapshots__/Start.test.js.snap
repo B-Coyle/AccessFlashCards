@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Start Should match rendered snapshot 1`] = `
-<article>
+<article
+  className="startContainer"
+>
   <input
     className="startBtn"
     onClick={[Function]}
